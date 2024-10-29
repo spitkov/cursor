@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shared Cursor Space</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div id="name-form" class="center">
+        <h2>Enter your name:</h2>
+        <input type="text" id="name-input">
+        <button onclick="registerName()">Join</button>
+    </div>
+
+    <div id="cursor-space" class="hidden">
+        <!-- Cursors will be added here dynamically -->
+    </div>
+
+    <div id="chat-container" class="hidden">
+        <div id="chat-messages"></div>
+        <div id="chat-input-area">
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html> 
